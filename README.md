@@ -1,0 +1,2 @@
+# CoDePretzel_Framework
+1. Una Estructura para hacer to propio código reusable, (No empezar de cero cada vez) 2. Una Forma de organizar tu proyecto (dónde va qué cosa) 3. Un proceso de desarrollo (cómo configurar tus comiplaciones, pruebas y deploy)  4. Una Propuesta periféricos y técnicas usados en industria (mejoras tu CV y no reinventas la rueda) 5. Cierta Independencia de fabricante (Puedas cambiar de fabricante sin tantísima modificación)
