@@ -27,6 +27,16 @@ Siendo:
 
 - Z = Revision Number, indica la entrega de un cambio mínimo, que no es una funcionalidad completa
 
+## Lógica de manejo de ramas
+
+Utilizamos la misma lógica recomendada por Atlassian, [gitflow](https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow)
+
+- Main: Última versión estable, contiene los tags de las versiones
+- Develop: Última versión en desarrollo, la rama base de donde se bifurcan las demás
+- Release: Version casi lista para integrarse a Main, esta branch puede ser usada para implementar pruebas más rigurosas de ser necesario
+- Feature_<IssueNumber>: Cada una de las funcion
+- Hotfix: Bifurcación de Main que arregla un problema en una versión específica y genera un tag de una versión intermedia con un bug fix (vease Lógica de Versionamiento)
+
 ## 1.0.0
 
 - Requerimientos para la instalación y configuración del framework
