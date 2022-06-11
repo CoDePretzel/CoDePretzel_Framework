@@ -12,7 +12,11 @@ Es decir
 4. Una Propuesta periféricos y técnicas usados en industria (mejoras tu CV y no reinventas la rueda)
 5. Cierta Independencia de fabricante (Puedas cambiar de fabricante sin tantísima modificación)
 
-Más información en la sección
+## Prioridad de funcionalidades para el Framework de CoDe Pretzel
+
+- Portabilidad (entre dispositivos conocidos y previamente enlistados)
+- Reusabilidad (mantenibilidad)
+- Estandiración
 
 ## Lógica de versionamiento
 
@@ -26,12 +30,6 @@ Siendo:
 - Y = Minor Number, es el que indica un agregado de funcionalidad, un bugfix o un parche, que no afecte la funcionalidad fundamental del software que requiera un cambio Mayor o incompatible.
 
 - Z = Revision Number, indica la entrega de un cambio mínimo, que no es una funcionalidad completa
-
-## Prioridad de funcionalidades para el Framework de CoDe Pretzel
-
-- Portabilidad (entre dispositivos conocidos y previamente enlistados)
-- Reusabilidad (mantenibilidad)
-- Estandiración
 
 ## Lógica de manejo de ramas
 
