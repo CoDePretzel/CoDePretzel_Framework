@@ -1,12 +1,18 @@
 ##  El sueño de CoDe Pretzel (CoDe Pretzel Framework)
 Soñamos construir una infraestructura de herramientas, técnicas y configuraciones que nos permita desarrollar software embebido de calidad, con facilidad de replicación, modularidad y con un proceso de desarrollo establecido.
 
-Es decir
+Es decir, tiene los siguientes objetivos:
 1. Una Estructura para hacer to propio código reusable, (No empezar de cero cada vez)
 2. Una Forma de organizar tu proyecto (dónde va qué cosa)
 3. Un proceso de desarrollo (cómo configurar tus comiplaciones, pruebas y deploy) 
 4. Una Propuesta periféricos y técnicas usados en industria (mejoras tu CV y no reinventas la rueda)
 5. Cierta Independencia de fabricante (Puedas cambiar de fabricante sin tantísima modificación)
+
+## Prioridad de funcionalidades para el Framework de CoDe Pretzel
+
+- Portabilidad (entre dispositivos conocidos y previamente enlistados)
+- Reusabilidad (mantenibilidad)
+- Estandiración
 
 Los siguientes elementos definen un poco mejor los elementos que atañen a cada punto entre paréntesis.
 ej. (1,2) se refiere a los puntos 1. Estructura de código reusable, 2. Forma de organizar tu proyecto
