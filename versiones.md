@@ -44,60 +44,199 @@ Utilizamos la misma lógica recomendada por Atlassian, [gitflow](https://www.atl
 - Hotfix: Bifurcación de Main que arregla un problema en una versión específica y genera un tag de una versión intermedia con un bug fix (vease Lógica de Versionamiento)
 
 ## Proyección de funcionalidades por versión
-La version 1.0.0 es el mínimo viable para probar todas las funcionalidades del framework en al menos dos dispositivos, donde se cumplan las 3 prioridades y los 5 objetivos del mismo
-Las versiones se muestran en orden cronológico y las versiones mayores siempre serán dependientes de las menores, a menos que se especifique lo contrario
+- La version 1.0.0 es el mínimo viable para probar todas las funcionalidades del framework en al menos dos dispositivos, donde se cumplan las 3 prioridades y los 5 objetivos del mismo
   
-### Version 0.0.12
+- Las versiones se muestran en orden cronológico y las versiones mayores siempre serán dependientes de las menores, a menos que se especifique lo contrario
+  
+- Hasta el momento (Jun 2022), parece que la `versión 0.10.6` es candidata para `Release` como MVP 1.0.0
+  
+### Version 0.2.12
 **- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
-  
-1. código fuente de aplicación (.c, .h, .a)
-2. código fuente de periféricos (.c, .h, .a)
-3. código fuente del API agnóstica al hardware (que conecta aplicación y drivers del fabricante)
-4. configuración de información específica de la tarjeta (botones, potenciometros, pantallas, etc.)
-5. configuración y archivos de pruebas unitarias (ej. Unity)
-6. configuración de hardware de las tarjetas - dispositivos soportados (ej. PIO JSON files)
-7. configuración y administración de compilación del proyecto (ej. pio directory structure)
-8. configuración de análisis estático (rutas hacia ejecutable de cppcheck y archivos de reglas)
+
+1. Código fuente de aplicación (.c, .h, .a)
+2. Código fuente de periféricos (.c, .h, .a)
+3. Código fuente del API agnóstica al hardware (que conecta aplicación y drivers del fabricante)
+4. Toolchain, configuración y administración de compilación del proyecto (ej. pio y su estructura de archivos)
 
 **- Documentación mínima inicial requerida:**
-  
-5. Configuración y prueba inicial del framework (entrada en read the docs)
-6. Guía de uso del framework con ejemplo, compilación y flasheo del mismo (entrada en read the docs)
-8. Guía de uso del framework con ejemplo de código de aplicación "hola LED" (entrada en read the docs)
-10. Guía de requerimientos e instalación dependencias para la instalación y uso del framework (entrada en read the docs)
-11. Guía básica de generación de código de drivers por el fabricante, ej. Microchip Harmony, Renesas Synergy, STM32CubeMX (solo dar indicaciones de a dónde acudir por la documentación oficial y una explicación general del proceso)
-12. Guía para configuración y uso de pruebas unitarias básicas con ejemplo (entrada en read the docs)
-12. Guía para configuración y uso de análisis estático (ej. cppcheck) con ejemplo (entrada en read the docs)
-13. Guía del desarrollador en el formato usado de Doxygen para documentar el código del framework
-13. Guía del desarrollador con ejemplo de cómo editar la documentación principal del framework y la documentación específica del API (ej. editar comentarios que use Doxygen para la API y editar directamente entradas de readthedocs para el resto de la documentación)
-13. Guia del desarrollador de la estructura y diagrama del framework incluyendo la lógica de nombramiento de funciones / módulos / variables
 
+5. Guía de configuración y prueba inicial del framework 0.0.12 (entrada en read the docs)
+6. Guía del desarrollador con ejemplo de cómo editar la documentación principal del framework y la documentación específica del API (ej. editar comentarios que use Doxygen para la API y editar directamente entradas de readthedocs para el resto de la documentación)
+
+
+**- Ejemplos / Módulos de código:**
+
+7. Código mínimo de prueba "hola led", usarlo como ejemplo inicial de la guía de configuración y prueba inicial del framework, requiere su propio repositorio que permita seguimiento, para asegurar el funcionamiento correcto del toolchain y la configuración inicial
   
-**- Ejemplos / Módulos de código: **
-12. Código y configuración funcional del ejemplo mínimo del framework (punto .), es decir un template de un Bootloader compatible con 2 dispositivos al menos (ej. AVR128DA y ATMega2560), sin validacion de memoria o checksum, solo cargar un programa por SPI, garbage in / garbage out
-12. Código y configuración funcional del ejemplo mínimo de código de aplicación (punto .), es decir, un programa que permita configurar un GPIO de salida en el que puedas conectar una resistencia y un led para hacer un "hola led" (parpadear un LED cada segundo), usando interrupciones del timer, sin usar delay() / polling, ej. usando on capture compare del timer y que solamente requiera agregar #include y #define de configuración en main.c
-12. Código de pruebas y configuración de verificación de la función toggleLED(), una prueba unitaria y revisar solo el valor del registro del periférico, usando el framework (es decir, siendo lo más independiente de hardware posible) 
+**- Configuración, instalación e integración :**
+
+8. Verificar si es compatible usar una estrategia de documentación por comentarios como Doxygen para implementar una documentación en [readthedocs.org][[en read the docs](https://readthedocs.org/)]
+9. Implementar y configurar el sitio de documentación principal del framework (ej readthedocs.org)
+10. (Funcionalidad) Toolchain y archivos de configuración para ATMega2560 para PIO Platform
+11. Asegurar soporte en PIO Boards de ATMega2560
+12. (Funcionalidad) Configuración de Arduino Mega en archivos JSON para PIO Boards 
+
+
+-----
+### Version 0.3.5
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+1. Configuración de información específica de las tarjetas - dispositivos soportados (ej. PIO JSON files) (botones, potenciometros, pantallas, etc.)
+
+
+**- Documentación mínima inicial requerida:**
+
+2. Guía del desarrollador en el formato usado de Doxygen para documentar el código del framework  
+3. Guia del desarrollador de la estructura y diagrama del framework incluyendo la lógica de nombramiento de funciones / módulos / variables
+4. Guía de requerimientos e instalación dependencias para la instalación y uso del framework (entrada en read the docs)
+
+**- Ejemplos / Módulos de código:**
+
+0. N/A
+
+**- Configuración, instalación e integración :**
+
+5. (Funcionalidad) Implementar y configurar el generador de documentación basado en comentarios (ej. Doxygen)
+
+----
+### Version 0.6.8
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+1. Configuración de análisis estático (rutas hacia ejecutable de cppcheck y archivos de reglas)
+
+**- Documentación mínima inicial requerida:**
+
+2. Guía básica de generación de código de drivers por el fabricante, ej. Microchip Harmony, Renesas Synergy, STM32CubeMX (solo dar indicaciones de a dónde acudir por la documentación oficial y una explicación general del proceso)
+3. Guía de uso del framework con ejemplo, compilación y flasheo del mismo (entrada en read the docs)
+4. Guía de uso del framework con ejemplo de código de aplicación "hola LED" (entrada en read the docs)  
+
+**- Ejemplos / Módulos de código:**
   
+5. (Funcionalidad) Código y configuración funcional del ejemplo mínimo de código de aplicación, es decir, un programa que permita configurar un GPIO de salida en el que puedas conectar una resistencia y un led para hacer un "hola led" (parpadear un LED cada segundo), usando interrupciones del timer, sin usar delay() / polling, ej. usando on capture compare del timer y que solamente requiera agregar #include y #define de configuración en main.c
+
+**- Configuración, instalación e integración :**
+
+6. (Funcionalidad) Agregar toolchain y configuraci[on para AVR128DA para PIO Platform
+7. (Funcionalidad) Configuración de AVR128DA Curiosity Nano en archivos JSON para PIO Boards 
+8. Toolchain y archivos de configuración para AVR128DA para PIO Platform
+
+
+----
+### Version 0.7.2
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+0. N/A
+
+**- Documentación mínima inicial requerida:**
+
+1. Guía del desarrollador para añadir cambios al framework (usando la lógica existente de manejo de ramas), es decir, el formato de la información que lleva el Pull Request, título, descripción, etiquetas, triage si es necesario y a quienes agregar como reviewers, además de cómo crear y manejar los issues de las nuevas versiones.  
   
-**- Configuración, instalación e integración : **
-4. Asegurar soporte en PIO Boards de AVR128DA
-4. Asegurar soporte en PIO Boards de ATMega2560
-5. Configuración de Unity con PIO para ejecutar pruebas unitarias como parte del proceso de compilación
-6. Configuración de AVR128DA Curiosity Nano en archivos JSON para PIO Boards
-6. Configuración de Arduino Mega en archivos JSON para PIO Boards  
-7. Toolchain y archivos de configuración para AVR128DA para PIO Platform
-7. Toolchain y archivos de configuración para ATMega2560 para PIO Platform
-8. Configuración de CPPCheck e integración con PIO Check con reglas por defecto (ej. MISRAC)
-14. Verificar si es compatible usar una estrategia de documentación por comentarios como Doxygen para implementar una documentación en [readthedocs.org][[en read the docs](https://readthedocs.org/)]
-14. Implementar y configurar el sitio de documentación principal del framework (ej readthedocs.org)
-15. Implementar y configurar el generador de documentación basado en comentarios (ej. Doxygen)
+**- Ejemplos / Módulos de código:**
+
+2. (Funcionalidad) Código y configuración funcional del ejemplo mínimo del framework, es decir un template de un Bootloader compatible con 2 dispositivos al menos (ej. AVR128DA y ATMega2560), sin validacion de memoria o checksum, solo cargar un programa por SPI, garbage in / garbage out
   
-Versiones futuras
+**- Configuración, instalación e integración :**
+0. N/A
+
+
+----
+### Version 0.10.6
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+1. Configuración y archivos de pruebas unitarias (ej. Unity)  
+
+**- Documentación mínima inicial requerida:**
+
+2. Guía para configuración y uso de análisis estático (ej. cppcheck) con ejemplo (entrada en read the docs)
+3. Guía para configuración y uso de pruebas unitarias básicas con ejemplo (entrada en read the docs)
   
+**- Ejemplos / Módulos de código:**
+
+4. (Funcionalidad) Código de pruebas y configuración de verificación de la función toggleLED(), una prueba unitaria y revisar solo el valor del registro del periférico, usando el framework (es decir, siendo lo más independiente de hardware posible) 
   
-x. Configuración de reglas para soporta BARR-C2018 en cppcheck, solo las reglas que no requieren code review.
-x. Integrar pruebas unitarias en Jenkins
-x. Conectar github para que no acepte un pull request si no pasaron las pruebas
-x. Conectar Jenkins con artifactory para liberar y administrar versiones pre-compiladas
-x. Conectar Jenkins con hardware real que permita hacer pruebas de funcionalidad o integración básicas
-x. Incluir y empacar en una imagen de Docker a Jenkins, Articatory, Unity, los archivos de Boards, Platforms y Framework para PIO
+**- Configuración, instalación e integración :**
+
+5. (Funcionalidad) Configuración de CPPCheck e integración con PIO Check con reglas por defecto (ej. MISRAC)
+6. (Funcionalidad) Configuración de Unity con PIO para ejecutar pruebas unitarias como parte del proceso de compilación
+
+
+----
+### Version 0.11.3
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+**- Documentación mínima inicial requerida:**
+
+1. Guía de desarrollador con referencia al estándar BARR-C2018, dónde encontrarlo, por qué usarlo y cuáles reglas serán las que se van a agregar (no todo el estándar necesita ser agregado a analizador estático)
+
+**- Ejemplos / Módulos de código:**
+
+**- Configuración, instalación e integración :**
+
+2. (Funcionalidad) Crear archivos de reglas para soporta BARR-C2018 en cppcheck, solo las reglas que no requieren code review.    
+3. Integrar configuración en PIO Check para soportar selección de este estándar
+
+
+----    
+### Version 0.12.2
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+**- Documentación mínima inicial requerida:**
+
+**- Ejemplos / Módulos de código:**
+    
+**- Configuración, instalación e integración :**
+
+1. Configurar e instalar Jenkins
+2. (Funcionalidad) Migrar pruebas unitarias a Jenkins
+
+----
+### Version 0.13.1
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+**- Documentación mínima inicial requerida:**
+
+**- Ejemplos / Módulos de código:**
+    
+**- Configuración, instalación e integración :**
+
+1. (Funcionalidad) Conectar github con Jenkins para que no acepte un pull request si no pasaron las pruebas
+
+----
+### Version 0.14.2
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+**- Documentación mínima inicial requerida:**
+
+**- Ejemplos / Módulos de código:**
+    
+**- Configuración, instalación e integración :**
+1. Instalar y configurar Artifactory
+2. (Funcionalidad) Conectar Jenkins con Artifactory para liberar y administrar versiones pre-compiladas
+
+----
+### Version 0.15.2
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+**- Documentación mínima inicial requerida:**
+
+1. Guía del desarrollador con ejemplo de cómo crear una conección con hardware para hacer pruebas automatizadas
+
+**- Ejemplos / Módulos de código:**
+    
+**- Configuración, instalación e integración :**
+
+2. (Funcionalidad) Conectar Jenkins con hardware real que permita hacer pruebas de funcionalidad o integración básicas
+
+----
+### Version 0.16.3
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+
+**- Documentación mínima inicial requerida:**
+
+1. Guía del desarrollador con ejemplo de cómo configurar y crear una imagen de Docker para replicar el entorno de desarrollo
+
+**- Ejemplos / Módulos de código:**
+    
+**- Configuración, instalación e integración :**
+2. Instalar y configurar Docker para comunicarse con hardware connectado por periféricos de la computadora
+3. (Funcionalidad) Incluir y empacar en una imagen de Docker a Jenkins, Articatory, Unity, los archivos de Boards, Platforms y Framework para PIO
