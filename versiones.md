@@ -20,6 +20,8 @@ Es decir
 
 ## Lógica de versionamiento
 
+:exclamation: Bajo revisión, se ha notado que este modo a como lo implementamos, resulta complicado de entender y rastrear, por lo que eventualmente si encontramos que alguien proponga uno mejor, lo podríamos modificar o reemplazar.
+
 La numeración de versiones que se seguirá será la siguiente:
 **X.Y.Z**
 
@@ -29,7 +31,7 @@ Siendo:
 
 - Y = Minor Number, es el que indica un agregado de funcionalidad, un bugfix o un parche, que no afecte la funcionalidad fundamental del software que requiera un cambio Mayor o incompatible.
 
-- Z = Revision Number, indica la entrega de un cambio mínimo, que no es una funcionalidad completa
+- Z = Revision Number, contador de cambios dentro de una versión Y
 
 ## Lógica de manejo de ramas
 
