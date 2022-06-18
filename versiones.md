@@ -27,11 +27,22 @@ La numeración de versiones que se seguirá será la siguiente:
 
 Siendo:
 
-- X = Mayor Number, es el que indica la versión principal del software, todo aquello dentro de un número de versión X será compatible entre sí. Todo aquello que sea de diferente versión no será compatible entre sí, es decir una versión X+1 por ejemplo, no será compatible con una versión X.
+**- X = Cambio Mayor (Mayor Number)**, es el que indica la versión principal del software.
 
-- Y = Minor Number, es el que indica un agregado de funcionalidad, un bugfix o un parche, que no afecte la funcionalidad fundamental del software que requiera un cambio Mayor o incompatible.
+Todo aquello dentro de un número de versión X será compatible entre sí. Todo aquello que sea de diferente versión no tendrá asegurada la compatibilidad entre sí, es decir una versión 3.0.1 por ejemplo, no necesariamente será compatible con una versión 2.0.1, sin embargo, una versión 2.0.1 si será compatible con una versión 2.25.3.
 
-- Z = Revision Number, contador de cambios dentro de una versión Y
+**- Y = Cambio Menor (Minor Number)**, es el que indica un aumento de funcionalidad.
+
+Esta nueva funcionalidad no debe requerir un cambio Mayor o incompatible.
+Es decir, si el cambio...
+
+- es una funcionalidad que nos acerque a los objetivos, se aumenta el cambio menor Y.
+Por ejemplo, la versión 0.4.0 necesita soportar la configuración necesaria para poder compilar un firmware para el AVR128DA y se agrega exitosamente, incluyendo documentación asociada y código de una apilcación básica para probar el funcionamiento, estos cambios se convertirían en la versión 0.5.0
+
+**- Z = Revisión (Revision Number)**, contador de cambios mínimos dentro de una versión Y.
+
+Es decir todos los cambios de tipo bugfix, documentación, parche o mejora que no afecte funcionalidad.
+Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparación (bugfix) y un nuevo archivo de configuración, por lo tanto se agrupan y estas modificaciones formarían la versión 0.4.1
 
 ## Lógica de manejo de ramas
 
