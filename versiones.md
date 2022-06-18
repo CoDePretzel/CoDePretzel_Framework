@@ -50,7 +50,8 @@ Utilizamos la misma lógica recomendada por Atlassian, [gitflow](https://www.atl
   
 ### Version 0.2.12
 **- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
-
+*Objetivo:* Un hola led funcionando que incluye, documentación completa de su uso y la configuración de compilación correspondiente
+  
 1. Código fuente de aplicación (.c, .h, .a)
 2. Código fuente de periféricos (.c, .h, .a)
 3. Código fuente del API agnóstica al hardware (que conecta aplicación y drivers del fabricante)
