@@ -1,4 +1,4 @@
-# Propuesta de funcionalidades de primeras versions del framework de CoDe Pretzel
+# Estructura de versionamiento y lógica de liberación de versiones (release) del framework de CoDe Pretzel
 
 ## Objetivos generales del framework
 
@@ -50,10 +50,9 @@ Esta nueva funcionalidad no debe requerir un cambio Mayor o incompatible.
 Es decir:
 
 - Si el cambio es una funcionalidad que nos acerque a los objetivos del framework, se aumenta el cambio menor Y.
+  :information_source: Excepto cuando este no está listo para liberarse y la siguiente versión es múltiplo de 5 (vease lógica de liberación de versiones)
 
 Por ejemplo, la versión 0.3.0 necesita soportar la configuración necesaria para poder compilar un firmware para el AVR128DA y se agrega exitosamente, incluyendo documentación asociada y código de una apilcación básica para probar el funcionamiento, estos cambios se convertirían en la versión 0.4.0
-
-:information_source: Las versiones menores en múltiplos de 5, son versiones estables y liberadas (vease lógica de liberación de versiones) y esto puede requerir pruebas más rigurosas.
 
 **- Z = Revisión (Revision Number)**, contador de cambios mínimos dentro de una versión Y.
 
@@ -76,14 +75,17 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
   - Si la versión 0.5.0 necesita un bugfix que mejora comentarios en el código que no afectan funcionalidad, no es candidato y se verá reflejado hasta el próximo release, la versión 0.10.0.
 
 
-## Proyección de funcionalidades por versión
-- La version 1.0.0 es el mínimo viable para probar todas las funcionalidades del framework en al menos dos dispositivos, donde se cumplan las 3 prioridades y los 5 objetivos del mismo
+## Propuesta inicial de funcionalidades
+  :bangbang: Esta sección probablemente se moverá a un archivo de backlog en el futuro próximo
   
-- Las versiones se muestran en orden cronológico y las versiones mayores siempre serán dependientes de las menores, a menos que se especifique lo contrario
+  :bangbang: Las versiones aquí listadas, son solo una propuesta, no representan un plan fijo.
   
-- Hasta el momento (Jun 2022), parece que la `versión 0.10.6` es candidata para `Release` como MVP 1.0.0
+  :information_source: La version 1.0.0 es el mínimo viable para probar todas las funcionalidades del framework en al menos dos dispositivos, donde se cumplan las 3 prioridades y los 5 objetivos del mismo
+ 
+  :information_source: Los elementos listados como **(Funcionalidad)** son cambios que directamente nos acercan a los objetivos de prioridad
   
-### Version 0.2.12
+  
+### Version 0.1.0
 **- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
 *Objetivo:* Un hola led funcionando que incluye, documentación completa de su uso y la configuración de compilación correspondiente
   
@@ -92,7 +94,7 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
 3. Código fuente del API agnóstica al hardware (que conecta aplicación y drivers del fabricante)
 4. Toolchain, configuración y administración de compilación del proyecto (ej. pio y su estructura de archivos)
 
-**- Documentación mínima inicial requerida:**
+**- Documentación:**
 
 5. Guía de configuración y prueba inicial del framework 0.2.12 (entrada en read the docs)
 6. Guía del desarrollador con ejemplo de cómo editar la documentación principal del framework y la documentación específica del API (ej. editar comentarios que use Doxygen para la API y editar directamente entradas de readthedocs para el resto de la documentación)
@@ -110,35 +112,29 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
 11. Asegurar soporte en PIO Boards de ATMega2560
 12. (Funcionalidad) Configuración de Arduino Mega en archivos JSON para PIO Boards 
 
-
 -----
-### Version 0.3.5
+### Version 0.1.1
 **- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
 
 1. Configuración de información específica de las tarjetas - dispositivos soportados (ej. PIO JSON files) (botones, potenciometros, pantallas, etc.)
 
-
-**- Documentación mínima inicial requerida:**
+**- Documentación:**
 
 2. Guía del desarrollador en el formato usado de Doxygen para documentar el código del framework  
 3. Guia del desarrollador de la estructura y diagrama del framework incluyendo la lógica de nombramiento de funciones / módulos / variables
 4. Guía de requerimientos e instalación dependencias para la instalación y uso del framework (entrada en read the docs)
 
-**- Ejemplos / Módulos de código:**
-
-0. N/A
-
 **- Configuración, instalación e integración :**
 
-5. (Funcionalidad) Implementar y configurar el generador de documentación basado en comentarios (ej. Doxygen)
+5. Implementar y configurar el generador de documentación basado en comentarios (ej. Doxygen)
 
 ----
-### Version 0.6.8
+### Version 0.2.0
 **- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
 
 1. Configuración de análisis estático (rutas hacia ejecutable de cppcheck y archivos de reglas)
 
-**- Documentación mínima inicial requerida:**
+**- Documentación:**
 
 2. Guía básica de generación de código de drivers por el fabricante, ej. Microchip Harmony, Renesas Synergy, STM32CubeMX (solo dar indicaciones de a dónde acudir por la documentación oficial y una explicación general del proceso)
 3. Guía de uso del framework con ejemplo, compilación y flasheo del mismo (entrada en read the docs)
@@ -156,12 +152,12 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
 
 
 ----
-### Version 0.7.2
+### Version 0.3.0
 **- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
 
 0. N/A
 
-**- Documentación mínima inicial requerida:**
+**- Documentación:**
 
 1. Guía del desarrollador para añadir cambios al framework (usando la lógica existente de manejo de ramas), es decir, el formato de la información que lleva el Pull Request, título, descripción, etiquetas, triage si es necesario y a quienes agregar como reviewers, además de cómo crear y manejar los issues de las nuevas versiones.  
   
@@ -174,12 +170,12 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
 
 
 ----
-### Version 0.10.6
+### Version 0.3.0
 **- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
 
 1. Configuración y archivos de pruebas unitarias (ej. Unity)  
 
-**- Documentación mínima inicial requerida:**
+**- Documentación:**
 
 2. Guía para configuración y uso de análisis estático (ej. cppcheck) con ejemplo (entrada en read the docs)
 3. Guía para configuración y uso de pruebas unitarias básicas con ejemplo (entrada en read the docs)
@@ -195,82 +191,23 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
 
 
 ----
-### Version 0.11.3
-**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+Backlog de funcionalidades deseables posteriores a version 0.3.0
+**- Documentación:**
 
-**- Documentación mínima inicial requerida:**
-
-1. Guía de desarrollador con referencia al estándar BARR-C2018, dónde encontrarlo, por qué usarlo y cuáles reglas serán las que se van a agregar (no todo el estándar necesita ser agregado a analizador estático)
-
-**- Ejemplos / Módulos de código:**
+  -. Guía de desarrollador con referencia al estándar BARR-C2018, dónde encontrarlo, por qué usarlo y cuáles reglas serán las que se van a agregar (no todo el estándar necesita ser agregado a analizador estático)
+  -. Guía del desarrollador con ejemplo de cómo crear una conección con hardware para hacer pruebas automatizadas
+  -. Guía del desarrollador con ejemplo de cómo configurar y crear una imagen de Docker para replicar el entorno de desarrollo
 
 **- Configuración, instalación e integración :**
+  
+  -. (Funcionalidad) Crear archivos de reglas para soporta BARR-C2018 en cppcheck, solo las reglas que no requieren code review.    
+  -. Integrar configuración en PIO Check para soportar selección de este estándar
+  -. Configurar e instalar Jenkins
+  -. Migrar pruebas unitarias a Jenkins
+  -. (Funcionalidad) Conectar github con Jenkins para que no acepte un pull request si no pasaron las pruebas
+  -.Instalar y configurar Artifactory
+  -. (Funcionalidad) Conectar Jenkins con Artifactory para liberar y administrar versiones pre-compiladas
+  -. (Funcionalidad) Conectar Jenkins con hardware real que permita hacer pruebas de funcionalidad o integración básicas
+  -. Instalar y configurar Docker para comunicarse con hardware connectado por periféricos de la computadora
+  - (Funcionalidad) Incluir y empacar en una imagen de Docker a Jenkins, Articatory, Unity, los archivos de Boards, Platforms y Framework para PIO
 
-2. (Funcionalidad) Crear archivos de reglas para soporta BARR-C2018 en cppcheck, solo las reglas que no requieren code review.    
-3. Integrar configuración en PIO Check para soportar selección de este estándar
-
-
-----    
-### Version 0.12.2
-**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
-
-**- Documentación mínima inicial requerida:**
-
-**- Ejemplos / Módulos de código:**
-    
-**- Configuración, instalación e integración :**
-
-1. Configurar e instalar Jenkins
-2. (Funcionalidad) Migrar pruebas unitarias a Jenkins
-
-----
-### Version 0.13.1
-**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
-
-**- Documentación mínima inicial requerida:**
-
-**- Ejemplos / Módulos de código:**
-    
-**- Configuración, instalación e integración :**
-
-1. (Funcionalidad) Conectar github con Jenkins para que no acepte un pull request si no pasaron las pruebas
-
-----
-### Version 0.14.2
-**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
-
-**- Documentación mínima inicial requerida:**
-
-**- Ejemplos / Módulos de código:**
-    
-**- Configuración, instalación e integración :**
-1. Instalar y configurar Artifactory
-2. (Funcionalidad) Conectar Jenkins con Artifactory para liberar y administrar versiones pre-compiladas
-
-----
-### Version 0.15.2
-**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
-
-**- Documentación mínima inicial requerida:**
-
-1. Guía del desarrollador con ejemplo de cómo crear una conección con hardware para hacer pruebas automatizadas
-
-**- Ejemplos / Módulos de código:**
-    
-**- Configuración, instalación e integración :**
-
-2. (Funcionalidad) Conectar Jenkins con hardware real que permita hacer pruebas de funcionalidad o integración básicas
-
-----
-### Version 0.16.3
-**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
-
-**- Documentación mínima inicial requerida:**
-
-1. Guía del desarrollador con ejemplo de cómo configurar y crear una imagen de Docker para replicar el entorno de desarrollo
-
-**- Ejemplos / Módulos de código:**
-    
-**- Configuración, instalación e integración :**
-2. Instalar y configurar Docker para comunicarse con hardware connectado por periféricos de la computadora
-3. (Funcionalidad) Incluir y empacar en una imagen de Docker a Jenkins, Articatory, Unity, los archivos de Boards, Platforms y Framework para PIO
