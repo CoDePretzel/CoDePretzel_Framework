@@ -18,32 +18,6 @@ Es decir
 - Reusabilidad (mantenibilidad)
 - Estandiración
 
-## Lógica de versionamiento
-
-:exclamation: Bajo revisión, se ha notado que este modo a como lo implementamos, resulta complicado de entender y rastrear, por lo que eventualmente si encontramos que alguien proponga uno mejor, lo podríamos modificar o reemplazar.
-
-La numeración de versiones que se seguirá será la siguiente:
-**X.Y.Z**
-
-Siendo:
-
-**- X = Cambio Mayor (Mayor Number)**, es el que indica la versión principal del software.
-
-Todo aquello dentro de un número de versión X será compatible entre sí. Todo aquello que sea de diferente versión no tendrá asegurada la compatibilidad entre sí, es decir una versión 3.0.1 por ejemplo, no necesariamente será compatible con una versión 2.0.1, sin embargo, una versión 2.0.1 si será compatible con una versión 2.25.3.
-
-**- Y = Cambio Menor (Minor Number)**, es el que indica un aumento de funcionalidad.
-
-Esta nueva funcionalidad no debe requerir un cambio Mayor o incompatible.
-Es decir, si el cambio...
-
-- es una funcionalidad que nos acerque a los objetivos, se aumenta el cambio menor Y.
-Por ejemplo, la versión 0.4.0 necesita soportar la configuración necesaria para poder compilar un firmware para el AVR128DA y se agrega exitosamente, incluyendo documentación asociada y código de una apilcación básica para probar el funcionamiento, estos cambios se convertirían en la versión 0.5.0
-
-**- Z = Revisión (Revision Number)**, contador de cambios mínimos dentro de una versión Y.
-
-Es decir todos los cambios de tipo bugfix, documentación, parche o mejora que no afecte funcionalidad.
-Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparación (bugfix) y un nuevo archivo de configuración, por lo tanto se agrupan y estas modificaciones formarían la versión 0.4.1
-
 ## Lógica de manejo de ramas
 
 Utilizamos la misma lógica recomendada por Atlassian, [gitflow](https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow)
@@ -53,6 +27,54 @@ Utilizamos la misma lógica recomendada por Atlassian, [gitflow](https://www.atl
 - Release: Version casi lista para integrarse a Main, esta branch puede ser usada para implementar pruebas más rigurosas de ser necesario
 - Feature_<IssueNumber>: Cada una de las funcion
 - Hotfix: Bifurcación de Main que arregla un problema en una versión específica y genera un tag de una versión intermedia con un bug fix (vease Lógica de Versionamiento)
+
+## Lógica de versionamiento
+
+La numeración de versiones que se seguirá será la siguiente:
+**X.Y.Z**
+
+Siendo:
+
+**- X = Cambio Mayor (Mayor Number)**, es el que indica la versión principal del software.
+
+Todo aquello dentro de un número de versión X será compatible entre sí.
+Todo lo que no, no tendrá asegurada la compatibilidad entre sí, es decir:
+Una versión 3.0.1 por ejemplo, no necesariamente será compatible con una versión 2.0.1, sin embargo, una versión 2.0.1 si será compatible con una versión 2.5.0.
+
+Las versiones mayores solo serán modificadas una vez se alcance estabilidad para producción, el codebase se vuelva incompatible con versiones anteriores, haya una migración de herramientas importante o algún caso similar.
+
+
+**- Y = Cambio Menor (Minor Number)**, es el que indica un aumento de funcionalidad.
+
+Esta nueva funcionalidad no debe requerir un cambio Mayor o incompatible.
+Es decir:
+
+- Si el cambio es una funcionalidad que nos acerque a los objetivos del framework, se aumenta el cambio menor Y.
+
+Por ejemplo, la versión 0.3.0 necesita soportar la configuración necesaria para poder compilar un firmware para el AVR128DA y se agrega exitosamente, incluyendo documentación asociada y código de una apilcación básica para probar el funcionamiento, estos cambios se convertirían en la versión 0.4.0
+
+:information_source: Las versiones menores en múltiplos de 5, son versiones estables y liberadas (vease lógica de liberación de versiones) y esto puede requerir pruebas más rigurosas.
+
+**- Z = Revisión (Revision Number)**, contador de cambios mínimos dentro de una versión Y.
+
+Es decir todos los cambios de tipo bugfix, documentación, parche o mejora que no afecte funcionalidad.
+
+Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparación (bugfix) y un nuevo archivo de configuración, por lo tanto se agrupan y estas modificaciones formarían la versión 0.4.1
+
+## :information_source: Lógica de liberación de versiones
+
+* Lo que se encuentra en la rama **main** será siempre la versión más reciente estable y soportada.
+
+* Se buscará que se liberen versiones a **main** cada 5 versiones menores, por ejemplo:
+
+  - 0.5.0 es candidata a liberarse, así como 0.10.0.
+  - 0.6.0 es intermedia y no serían candidatas a liberarse
+
+* Las versiones de revisión podrán liberarse a **main** siempre y cuando sean bugfixes críticos o aclaraciones de documentación importantes, por ejemplo:
+ 
+  - Si la versión 0.5.0 necesita un bugfix que arregla el proceso de compilación del bootloader, sí es candidato a liberarse a main, en la versión 0.5.1.
+  - Si la versión 0.5.0 necesita un bugfix que mejora comentarios en el código que no afectan funcionalidad, no es candidato y se verá reflejado hasta el próximo release, la versión 0.10.0.
+
 
 ## Proyección de funcionalidades por versión
 - La version 1.0.0 es el mínimo viable para probar todas las funcionalidades del framework en al menos dos dispositivos, donde se cumplan las 3 prioridades y los 5 objetivos del mismo
