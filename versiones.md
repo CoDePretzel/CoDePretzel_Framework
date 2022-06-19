@@ -50,6 +50,7 @@ Esta nueva funcionalidad no debe requerir un cambio Mayor o incompatible.
 Es decir:
 
 - Si el cambio es una funcionalidad que nos acerque a los objetivos del framework, se aumenta el cambio menor Y.
+  
   :information_source: Excepto cuando este no está listo para liberarse y la siguiente versión es múltiplo de 5 (vease lógica de liberación de versiones)
 
 Por ejemplo, la versión 0.3.0 necesita soportar la configuración necesaria para poder compilar un firmware para el AVR128DA y se agrega exitosamente, incluyendo documentación asociada y código de una apilcación básica para probar el funcionamiento, estos cambios se convertirían en la versión 0.4.0
@@ -108,9 +109,9 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
 
 8. Verificar si es compatible usar una estrategia de documentación por comentarios como Doxygen para implementar una documentación en [readthedocs.org][[en read the docs](https://readthedocs.org/)]
 9. Implementar y configurar el sitio de documentación principal del framework (ej readthedocs.org)
-10. (Funcionalidad) Toolchain y archivos de configuración para ATMega2560 para PIO Platform
+10. **(Funcionalidad)** Toolchain y archivos de configuración para ATMega2560 para PIO Platform
 11. Asegurar soporte en PIO Boards de ATMega2560
-12. (Funcionalidad) Configuración de Arduino Mega en archivos JSON para PIO Boards 
+12. **(Funcionalidad)** Configuración de Arduino Mega en archivos JSON para PIO Boards 
 
 -----
 ### Version 0.1.1
@@ -142,20 +143,17 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
 
 **- Ejemplos / Módulos de código:**
   
-5. (Funcionalidad) Código y configuración funcional del ejemplo mínimo de código de aplicación, es decir, un programa que permita configurar un GPIO de salida en el que puedas conectar una resistencia y un led para hacer un "hola led" (parpadear un LED cada segundo), usando interrupciones del timer, sin usar delay() / polling, ej. usando on capture compare del timer y que solamente requiera agregar #include y #define de configuración en main.c
+5. **(Funcionalidad)** Código y configuración funcional del ejemplo mínimo de código de aplicación, es decir, un programa que permita configurar un GPIO de salida en el que puedas conectar una resistencia y un led para hacer un "hola led" (parpadear un LED cada segundo), usando interrupciones del timer, sin usar delay() / polling, ej. usando on capture compare del timer y que solamente requiera agregar #include y #define de configuración en main.c
 
 **- Configuración, instalación e integración :**
 
-6. (Funcionalidad) Agregar toolchain y configuraci[on para AVR128DA para PIO Platform
-7. (Funcionalidad) Configuración de AVR128DA Curiosity Nano en archivos JSON para PIO Boards 
+6. **(Funcionalidad)** Agregar toolchain y configuraci[on para AVR128DA para PIO Platform
+7. **(Funcionalidad)** Configuración de AVR128DA Curiosity Nano en archivos JSON para PIO Boards 
 8. Toolchain y archivos de configuración para AVR128DA para PIO Platform
 
 
 ----
 ### Version 0.3.0
-**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
-
-0. N/A
 
 **- Documentación:**
 
@@ -163,14 +161,10 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
   
 **- Ejemplos / Módulos de código:**
 
-2. (Funcionalidad) Código y configuración funcional del ejemplo mínimo del framework, es decir un template de un Bootloader compatible con 2 dispositivos al menos (ej. AVR128DA y ATMega2560), sin validacion de memoria o checksum, solo cargar un programa por SPI, garbage in / garbage out
+2. **(Funcionalidad)** Código y configuración funcional del ejemplo mínimo del framework, es decir un template de un Bootloader compatible con 2 dispositivos al menos (ej. AVR128DA y ATMega2560), sin validacion de memoria o checksum, solo cargar un programa por SPI, garbage in / garbage out
   
-**- Configuración, instalación e integración :**
-0. N/A
-
-
 ----
-### Version 0.3.0
+### Version 0.4.0
 **- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
 
 1. Configuración y archivos de pruebas unitarias (ej. Unity)  
@@ -182,16 +176,17 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
   
 **- Ejemplos / Módulos de código:**
 
-4. (Funcionalidad) Código de pruebas y configuración de verificación de la función toggleLED(), una prueba unitaria y revisar solo el valor del registro del periférico, usando el framework (es decir, siendo lo más independiente de hardware posible) 
+4. **(Funcionalidad)** Código de pruebas y configuración de verificación de la función toggleLED(), una prueba unitaria y revisar solo el valor del registro del periférico, usando el framework (es decir, siendo lo más independiente de hardware posible) 
   
 **- Configuración, instalación e integración :**
 
-5. (Funcionalidad) Configuración de CPPCheck e integración con PIO Check con reglas por defecto (ej. MISRAC)
-6. (Funcionalidad) Configuración de Unity con PIO para ejecutar pruebas unitarias como parte del proceso de compilación
+5. **(Funcionalidad)** Configuración de CPPCheck e integración con PIO Check con reglas por defecto (ej. MISRAC)
+6. **(Funcionalidad)** Configuración de Unity con PIO para ejecutar pruebas unitarias como parte del proceso de compilación
 
 
 ----
-Backlog de funcionalidades deseables posteriores a version 0.3.0
+Backlog de funcionalidades deseables
+  
 **- Documentación:**
 
   -. Guía de desarrollador con referencia al estándar BARR-C2018, dónde encontrarlo, por qué usarlo y cuáles reglas serán las que se van a agregar (no todo el estándar necesita ser agregado a analizador estático)
