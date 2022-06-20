@@ -87,8 +87,10 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
   
   
 ### Version 0.1.0
-**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
+  
 *Objetivo:* Un hola led funcionando que incluye, documentación completa de su uso y la configuración de compilación correspondiente
+  
+**- Estructura de archivos y carpetas para un proyecto básico incluyendo la división por componentes de:**
   
 1. Código fuente de aplicación (.c, .h, .a)
 2. Código fuente de periféricos (.c, .h, .a)
