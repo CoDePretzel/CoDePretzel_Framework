@@ -99,7 +99,7 @@ Por ejemplo, la versión 0.4.0 necesita un cambio de documentación, una reparac
 
 **- Documentación:**
 
-5. Guía de configuración y prueba inicial del framework 0.2.12 (entrada en read the docs)
+5. Guía de configuración y prueba inicial del framework 0.1.0 (entrada en read the docs)
 6. Guía del desarrollador con ejemplo de cómo editar la documentación principal del framework y la documentación específica del API (ej. editar comentarios que use Doxygen para la API y editar directamente entradas de readthedocs para el resto de la documentación)
 
 
