@@ -13,6 +13,8 @@ El cómo vamos a lograr ésto está estipulado en el archivo de [versiones.md](h
 - Reglas de colaboración con ramas en github
 - Propuesta de funcionalidades por versión
 
+Algunos ejemplos de aplicación de los principios se pueden consultar [aqui](https://github.com/CoDePretzel/CoDePretzel_Framework/blob/main/ejemplos_de_los_principios.md)
+
 ## Prioridad de funcionalidades para el Framework de CoDe Pretzel
 
 - Portabilidad (entre dispositivos conocidos y previamente enlistados)
