@@ -1,26 +1,26 @@
-### Los objetivos se pueden aplicar de la siguiente manera:
+# Los objetivos se pueden aplicar de la siguiente manera:
 
 Los siguientes elementos definen un poco mejor los elementos que atañen a cada punto entre paréntesis.
 ej. (1,2) se refiere a los puntos 1. Estructura de código reusable, 2. Forma de organizar tu proyecto
 
-#### Desarrollo de software colaborativo (2, 3)
+## Desarrollo de software colaborativo (2, 3)
 - Colaboración en github (pull requests y branches para cada funcionalidad)
 - Code reviews para aprobar los pull requests
 - Merge conflicts
 
-#### Aseguramiento de la calidad (1, 2, 3)
+## Aseguramiento de la calidad (1, 2, 3)
 - Análisis estático
 - Enforzamiento del estándar BarrC-2018
 - Pruebas unitarias
 
-#### Desarrollo modular (1)
+## Desarrollo modular (1)
 - Desarrollo impulsado por pruebas (para embedded)
 
-#### Automatización del proceso de desarrollo (3)
+## Automatización del proceso de desarrollo (3)
 - Automatización de pruebas y compilación en jenkins
 - Deploy conectado a Jenkins con Artifactory
 
-#### Técnicas usadas en industria (4)
+## Técnicas usadas en industria (4)
 - Desarrollo de bootloaders (UART o SPI)
 - Uso de filtros digitales (algún otro que no sea promedio)
 - Uso de Formato Q (Q15 por ejemplo) (Número fraccionario representado en un número entero)
@@ -32,7 +32,7 @@ ej. (1,2) se refiere a los puntos 1. Estructura de código reusable, 2. Forma de
 - Uso de JTAG para acceso a opciones avanzadas de depuración
 - Implementación básica de modos de bajo consumo (sleep mode)
 
-#### periféricos usados en industria (4)
+## periféricos usados en industria (4)
 - ADC
 - PWM
 - I2C
