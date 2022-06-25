@@ -1,23 +1,5 @@
 # Estructura de versionamiento y lógica de liberación de versiones (release) del framework de CoDe Pretzel
 
-## Objetivos generales del framework
-
-Una infraestructura de herramientas, técnicas y configuraciones que nos permita desarrollar software embebido de calidad, con facilidad de replicación, modularidad y con un proceso de desarrollo establecido.
-
-Es decir
-
-1. Una Estructura para hacer to propio código reusable, (No empezar de cero cada vez)
-2. Una Forma de organizar tu proyecto (dónde va qué cosa)
-3. Un proceso de desarrollo (cómo configurar tus comiplaciones, pruebas y deploy)
-4. Una Propuesta periféricos y técnicas usados en industria (mejoras tu CV y no reinventas la rueda)
-5. Cierta Independencia de fabricante (Puedas cambiar de fabricante sin tantísima modificación)
-
-## Prioridad de funcionalidades para el Framework de CoDe Pretzel
-
-- Portabilidad (entre dispositivos conocidos y previamente enlistados)
-- Reusabilidad (mantenibilidad)
-- Estandiración
-
 ## Lógica de manejo de ramas
 
 Utilizamos la misma lógica recomendada por Atlassian, [gitflow](https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow)
