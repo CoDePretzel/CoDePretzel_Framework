@@ -1,7 +1,9 @@
-# Los objetivos se pueden aplicar de la siguiente manera:
+# Los principios se pueden aplicar de la siguiente manera:
 
-Los siguientes elementos definen un poco mejor los elementos que atañen a cada punto entre paréntesis.
-ej. (1,2) se refiere a los puntos 1. Estructura de código reusable, 2. Forma de organizar tu proyecto
+Los siguientes elementos definen un poco mejor la forma que se pueden aplicar los principios.
+Los números entre paréntesis indican qué principios se están usando.
+
+**ejemplo.** (1,2) se refiere a los principios 1. Estructura de código reusable y 2. Forma de organizar tu proyecto
 
 ## Desarrollo de software colaborativo (2, 3)
 - Colaboración en github (pull requests y branches para cada funcionalidad)
