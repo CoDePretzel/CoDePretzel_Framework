@@ -29,6 +29,5 @@ Secciones:
 
 .. toctree::
    :maxdepth: 2
-
-   usage
+   
    api
