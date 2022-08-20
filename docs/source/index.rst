@@ -1,4 +1,7 @@
-Bienvenido a la documentación del sueño de CoDe Pretzel (CoDe Pretzel Framework)
+Bienvenido
+===========
+
+Esta es la documentación del sueño de CoDe Pretzel (CoDe Pretzel Framework)
 ===================================
 
 **CoDe Pretzel Framework** es un esfuerzo open source, con licencia Apache 2.0, donde se busca:
