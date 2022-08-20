@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'CoDe Pretzel Framework'
+copyright = 'Apache 2.0 License'
+author = 'Rafael Karosuo'
 
 release = '0.1'
 version = '0.1.0'
