@@ -31,3 +31,4 @@ Secciones:
    :maxdepth: 2
    
    api
+   otra_seccion
