@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'lumache'
+project = 'Lumache'
 copyright = 'Apache 2.0 License'
 author = 'Rafael Karosuo'
 
