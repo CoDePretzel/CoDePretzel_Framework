@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'Lumache'
+project = 'CoDe Pretzel Framework'
 copyright = 'Apache 2.0 License'
 author = 'Rafael Karosuo'
 
