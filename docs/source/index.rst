@@ -31,4 +31,4 @@ Secciones:
    :maxdepth: 2
    
    api
-   secciones/estructura_y_herramientas_framework
+   secciones/estructura_framework/main_estructura
