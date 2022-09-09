@@ -1,12 +1,22 @@
-##  El sueño de CoDe Pretzel (CoDe Pretzel Framework)
-Soñamos construir una infraestructura de herramientas, técnicas y configuraciones que nos permita desarrollar software embebido de calidad, con facilidad de replicación, modularidad y con un proceso de desarrollo establecido.
+## El sueño de CoDe Pretzel (CoDe Pretzel Framework)
 
-Es decir, tiene los siguientes objetivos:
-1. Una Estructura para hacer to propio código reusable, (No empezar de cero cada vez)
-2. Una Forma de organizar tu proyecto (dónde va qué cosa)
-3. Un proceso de desarrollo (cómo configurar tus comiplaciones, pruebas y deploy) 
-4. Una Propuesta periféricos y técnicas usados en industria (mejoras tu CV y no reinventas la rueda)
-5. Cierta Independencia de fabricante (Puedas cambiar de fabricante sin tantísima modificación)
+Soñamos construir una infraestructura de herramientas, documentación, técnicas y configuraciones que nos permita desarrollar software embebido de calidad, con facilidad de replicación, modularidad y con un proceso de desarrollo establecido.
+
+## Los 5 principios del Framework de CoDe Pretzel
+
+1. Crear tu propio código reusable, (No empezar de cero cada vez)
+2. Organizar tu proyecto (dónde va qué cosa)
+3. Tener un proceso de desarrollo (cómo configurar tus compilaciones, pruebas y desplegue)
+4. Reusar periféricos y técnicas implementados en industria (mejoras tu CV y no reinventas la rueda)
+5. Tener cierta Independencia de fabricante (Puedas cambiar de fabricante sin tantísima modificación)
+
+El cómo vamos a lograr ésto está estipulado en el archivo de [versiones.md](https://github.com/CoDePretzel/CoDePretzel_Framework/blob/main/versiones.md) donde se explica:
+
+- Lógica de versionamiento
+- Reglas de colaboración con ramas en github
+- Propuesta de funcionalidades por versión
+
+Algunos ejemplos de aplicación de los principios se pueden consultar [aqui](https://github.com/CoDePretzel/CoDePretzel_Framework/blob/main/ejemplos_de_los_principios.md)
 
 ## Prioridad de funcionalidades para el Framework de CoDe Pretzel
 
@@ -14,45 +24,21 @@ Es decir, tiene los siguientes objetivos:
 - Reusabilidad (mantenibilidad)
 - Estandiración
 
-Los siguientes elementos definen un poco mejor los elementos que atañen a cada punto entre paréntesis.
-ej. (1,2) se refiere a los puntos 1. Estructura de código reusable, 2. Forma de organizar tu proyecto
+## La documentación del framework es parte del mismo! ![](https://readthedocs.org/projects/code-pretzel-framework/badge/?version=latest)
 
-### Desarrollo de software colaborativo (2, 3)
-- Colaboración en github (pull requests y branches para cada funcionalidad)
-- Code reviews para aprobar los pull requests
-- Merge conflicts
+:grey_exclamation: Necesitamos ayuda para conseguirle un SSL a nuestro subdominio de documentación!
 
-### Aseguramiento de la calidad (1, 2, 3)
-- Análisis estático
-- Enforzamiento del estándar BarrC-2018
-- Pruebas unitarias
+Se puede acceder desde el sitio [framework.codepretzel.org](https://framework.codepretzel.org/)
 
-### Desarrollo modular (1)
-- Desarrollo impulsado por pruebas (para embedded)
+La documentación está dividida en secciones:
 
-### Automatización del proceso de desarrollo (3)
-- Automatización de pruebas y compilación en jenkins
-- Deploy conectado a Jenkins con Artifactory
-
-### Técnicas usadas en industria (4)
-- Desarrollo de bootloaders (UART o SPI)
-- Uso de filtros digitales (algún otro que no sea promedio)
-- Uso de Formato Q (Q15 por ejemplo) (Número fraccionario representado en un número entero)
-- Abstracción de hardware multicapas (APIs y HALs)
-- Machine Learning en Embedded (Edge devices, probablemente con TinyML/TFLight)
-- Configuración y uso de Watchdog timers
-- Implementación de máquinas de estados
-- Manejo de información por interrupciones sin variables globales (y posteriormente interrupciones anidadas)
-- Uso de JTAG para acceso a opciones avanzadas de depuración
-- Implementación básica de modos de bajo consumo (sleep mode)
-
-### periféricos usados en industria (4)
-- ADC
-- PWM
-- I2C
-- SPI
-- QEI
-
-
-Sin embargo, estamos conscientes de que es una cantidad de trabajo enorme, sobre todo si pensamos que solo podremos desarrollar proyectos hasta tener esta infraestructura lista.
-Por lo que hemos pensado en ir implementando diferentes elementos de la misma a través de pequeños proyectos que a su vez también nos permitan practicar y aprender.
+- Estructura, componentes y herramientas del framework
+- Instalación, dependencias y requerimientos
+- API
+- Ejemplos de código de aplicación
+- Scripts de configuración, integración y automatización
+- Cómo contribuir al framework
+  - Actualización de la documentación
+    - Agregar/Editar secciones y contenido al proyecto de Sphynx
+    - Generar documentación de código con Doxygen y Breathe
+  - Procedimiento para crear nuevas ramas y Pull Requests
