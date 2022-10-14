@@ -32,3 +32,5 @@ Secciones:
    
    api
    secciones/estructura_framework/main_estructura
+   secciones/scripts/main_scripts
+   
