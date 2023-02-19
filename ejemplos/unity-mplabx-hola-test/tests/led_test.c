@@ -5,6 +5,7 @@
  * Created on January 29, 2023, 9:58 PM 
  */
 #include <stdint.h>
+#include "unity_fixture.h"
 
 TEST_GROUP(hello_led);
 
@@ -25,7 +26,20 @@ static void expect(uint8_t led_state)
     expected_led_value = led_state;
 }
 
-static void given(uint8)
+static void given(uint8_t state_given)
 {
+    TEST_ASSERT_EQUAL(state_given, expected_led_value);
+}
 
+TEST(hello_led, DummyFalse)
+{
+    // Demo de un test que falla
+    TEST_ASSERT_FALSE(1);
+}
+
+TEST(hello_led, TestLEDOn)
+{
+    //Demo de un test positivo, manualmente hacer como que el test pasó
+    expect(1); // Escribir el valor esperado del pin del LED  
+    given(1); // Manualmente escribiendo el valor esperado, debe de pasar el test
 }
