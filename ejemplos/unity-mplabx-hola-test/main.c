@@ -30,6 +30,11 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
+
+#ifdef UNIT_TESTS
+#include "tests/test_runners/all_tests.h"
+#endif
+
 #include "mcc_generated_files/system/system.h"
 #include "mcc_generated_files/timer/delay.h"
 #include "mcc_generated_files/uart/usart1.h"
@@ -37,23 +42,29 @@
     Main application
 */
 
-#ifdef UNIT_TESTS
-#include "unit_tests/testrunner.h"
-#endif
 
 int main(void)
 {
     SYSTEM_Initialize();
     USART1_Initialize();
     USART1_Enable();
+    USART1_TransmitEnable();
         
+    #ifdef UNIT_TESTS
+    void run_unity_tests(char * main_path);    
+    #define PRINT_B
+    #endif
     
     while(1)
     {
         IO_PC6_SetLow();
-        DELAY_milliseconds(500);        
-        USART1_Write('A');
-        IO_PC6_SetHigh();
         DELAY_milliseconds(500);
+#ifdef PRINT_B
+        USART1_Write('B');
+#else
+        USART1_Write('A');
+#endif        
+        IO_PC6_SetHigh();
+        DELAY_milliseconds(500);        
     }
 }
