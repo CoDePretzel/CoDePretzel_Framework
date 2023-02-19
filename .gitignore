@@ -68,4 +68,3 @@ venv.bak/
 *.map
 # Ignore the contents and subdirectories
 **/dist/*
-dist/*
