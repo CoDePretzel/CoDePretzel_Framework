@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/rafae/MPLAB_ws/hola_led_with_test.X/tests/tests_runner.c</file>
-            <file>file:/C:/Users/rafae/MPLAB_ws/hola_led_with_test.X/main.c</file>
-            <file>file:/C:/Users/rafae/MPLAB_ws/hola_led_with_test.X/tests/led_test.c</file>
+            <file>file:/C:/Users/rafae/OneDrive/Documents/GitHub/CoDePretzel_Framework/ejemplos/unity-mplabx-hola-test/unity/unity_fixture_internals.h</file>
+            <file>file:/C:/Users/rafae/OneDrive/Documents/GitHub/CoDePretzel_Framework/ejemplos/unity-mplabx-hola-test/unity/my_c_file.c</file>
+            <file>file:/C:/Users/rafae/OneDrive/Documents/GitHub/CoDePretzel_Framework/ejemplos/unity-mplabx-hola-test/unity/unity_fixture.c</file>
+            <file>file:/C:/Users/rafae/OneDrive/Documents/GitHub/CoDePretzel_Framework/ejemplos/unity-mplabx-hola-test/tests/test_runners/all_tests.h</file>
+            <file>file:/C:/Users/rafae/OneDrive/Documents/GitHub/CoDePretzel_Framework/ejemplos/unity-mplabx-hola-test/unity/unity_internals.h</file>
         </group>
     </open-files>
 </project-private>
