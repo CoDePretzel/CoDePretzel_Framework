@@ -66,5 +66,5 @@ venv.bak/
 *.sym
 *.mk
 *.map
-dist/
-dist/**
+# Ignore the contents and subdirectories
+**/dist/*
