@@ -56,7 +56,8 @@ Add additional notes about how to deploy this on a live system
 
 ## Dependencias
 
-* [MPLABX 6.00]() - IDE de Microchip (TODO: Agregar link de MPLABX)
+* [MPLABX 6.00](https://www.microchip.com/en-us/tools-resources/archives/mplab-ecosystem) - IDE de Microchip
+<!-- [UNITI 0.0] (LINK) TODO: AGREGAR LINK A LA VERSION QUE SE ESTA USANDO DE UNITY -->
 
 ## Contributing
 
