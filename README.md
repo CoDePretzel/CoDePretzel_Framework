@@ -8,7 +8,7 @@ Soñamos construir una infraestructura de herramientas, documentación, técnica
 2. Organizar tu proyecto (dónde va qué cosa)
 3. Tener un proceso de desarrollo (cómo configurar tus compilaciones, pruebas y desplegue)
 4. Reusar periféricos y técnicas implementados en industria (mejoras tu CV y no reinventas la rueda)
-5. Tener cierta Independencia de hardware en el código
+5. Tener cierta independencia de hardware en el código
 
 El cómo vamos a lograr ésto está estipulado en el archivo de [versiones.md](https://github.com/CoDePretzel/CoDePretzel_Framework/blob/main/versiones.md) donde se explica:
 
