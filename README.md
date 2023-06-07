@@ -21,7 +21,7 @@ Algunos ejemplos de aplicación de los principios se pueden consultar [aqui](htt
 ## Prioridad de funcionalidades para el Framework de CoDe Pretzel
 
 - Reusabilidad
-- Estandiración de un proceso de desarrollo
+- Estandarización de un proceso de desarrollo
 - Mantenibilidad
 
 ## La documentación del framework es parte del mismo! ![](https://readthedocs.org/projects/code-pretzel-framework/badge/?version=latest)
